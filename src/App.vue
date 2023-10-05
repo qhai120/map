@@ -6,6 +6,16 @@
   <router-view/>
 </template>
 
+<script>
+import { provide } from 'vue'
+import * as echarts from 'echarts'
+export default {
+  setup () {
+    provide('echarts', echarts)
+  }
+}
+</script>
+
 <style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -15,9 +25,12 @@
   color: #2c3e50;
 }
 
+body{
+  background-image: url('@/assets/c.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 nav {
-  padding: 30px;
-
   a {
     font-weight: bold;
     color: #2c3e50;
